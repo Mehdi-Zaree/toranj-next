@@ -85,7 +85,7 @@ importers:
         specifier: ^18.3.0
         version: 18.3.0
       drizzle-kit:
-        specifier: ^0.22.1-0be85c4
+        specifier: ^0.22.8
         version: 0.22.8
       pg:
         specifier: ^8.12.0

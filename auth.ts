@@ -1,15 +1,14 @@
-
-import {DrizzleAdapter} from "@auth/drizzle-adapter";
-import {compareSync} from "bcrypt-ts";
-import {eq} from 'drizzle-orm'
-import type {NextAuthConfig} from "next-auth";
+import { DrizzleAdapter } from "@auth/drizzle-adapter";
+import { compareSync } from "bcrypt-ts";
+import { eq } from 'drizzle-orm';
+import type { NextAuthConfig } from "next-auth";
 import NextAuth from "next-auth";
-import CredentialsProvider from 'next-auth/providers/credentials'
-import db from './db/drizzle'
-import {users} from './db/schema'
+import CredentialsProvider from 'next-auth/providers/credentials';
+import db from './db/drizzle';
+import { users } from './db/schema';
 
-// @ts-ignore
 export const config = {
+    secret: process.env.NEXTAUTH_SECRET,
     pages: {
         signIn: '/sign-in',
         error: '/sign-in',
@@ -22,43 +21,57 @@ export const config = {
     providers: [
         CredentialsProvider({
             credentials: {
-                email: {
-                    type: 'email',
-                },
-                password: {type: 'password'}
+                email: { type: 'email' },
+                password: { type: 'password' },
             },
             async authorize(credentials) {
-                if(credentials == null) return null
+                if (!credentials) return null;
 
                 const user = await db.query.users.findFirst({
-                    where : eq(users.email, credentials.email as string)
-                })
-                if (user&&user.password){
-                    const isMatch = compareSync(
-                        credentials.password as string,
-                        user.password
-                    )
-                    if(isMatch){
+                    where: eq(users.email, credentials.email as string),
+                });
+
+                if (user && user.password) {
+                    const isMatch = compareSync(credentials.password as string, user.password);
+                    if (isMatch) {
                         return {
                             id: user.id,
                             name: user.name,
                             email: user.email,
-                            role:user.role
-                        }
+                            role: user.role,
+                        };
                     }
                 }
-                return null
-            }
-        })
+
+                return null;
+            },
+        }),
     ],
-    callbacks:{
-        session: async ({session,user,trigger,token}:any)=>{
-            session.user.id = token.sub
-            if (trigger === 'update'){
-                session.user.name  = user.name
+    callbacks: {
+        async jwt({ token, user }) {
+            // If user is returned from authorize, include it in the token
+            if (user) {
+                token.id = user.id;
+                token.name = user.name;
+                token.email = user.email;
+                token.role = user.role;
             }
-            return session
-        }
-    }
-} satisfies NextAuthConfig
-export const {handlers, auth,signIn,signOut} = NextAuth(config)
+            return token;
+        },
+        async session({ session, token }) {
+            // اینجا باید اطلاعات رو بدیم به سشن
+            if (token) {
+                session.user.id = token.id;
+                session.user.name = token.name;
+                session.user.email = token.email;
+                session.user.token = token.jti; // این همون توکنه
+                session.user.role = token.role;
+                session.user.init = token.iat;
+            }
+            console.log(token)
+            return session;
+        },
+    },
+} satisfies NextAuthConfig;
+
+export const { handlers, auth, signIn, signOut } = NextAuth(config);

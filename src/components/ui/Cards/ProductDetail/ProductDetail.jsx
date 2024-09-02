@@ -18,7 +18,7 @@ function ProductDetail({setIsModalOpen, productImage, productName, productPrice,
                     pagination={{clickable: true}}
                 >
                     <SwiperSlide>
-                        <Image src={productImage} alt={productName} width={10000} height={10000}
+                        <Image loading={'eager'} src={productImage} alt={productName} width={10000} height={10000}
                                className={'lg:w-full w-3/4  mx-auto'}/>
                     </SwiperSlide>
                 </Swiper>
