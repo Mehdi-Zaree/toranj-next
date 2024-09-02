@@ -2,8 +2,8 @@
 import React from "react";
 import {useSearchParams} from "next/navigation";
 import {useFormState, useFormStatus} from 'react-dom'
-import {signInWithCredentials} from "../../../../lib/actions/user.action";
-import {signInDefaultValues} from "../../../../lib/constants";
+import {signInWithCredentials} from "../../../lib/actions/user.action";
+import {signInDefaultValues} from "../../../lib/constants";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelope} from "@fortawesome/free-regular-svg-icons";
 import {faLock} from "@fortawesome/free-solid-svg-icons";

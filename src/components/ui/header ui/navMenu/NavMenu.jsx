@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
 import Image from "next/image";
-import {APP_NAME} from "../../../../lib/constants";
+import {APP_NAME} from "./../../../../../lib/constants/index";
 import Link from "next/link";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faHouseChimney} from "@fortawesome/free-solid-svg-icons/faHouseChimney";

@@ -1,16 +1,8 @@
 import React from 'react';
-import Image from "next/image";
-import Link from "next/link";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faHouseChimney} from "@fortawesome/free-solid-svg-icons/faHouseChimney";
-import {faBagShopping} from "@fortawesome/free-solid-svg-icons/faBagShopping";
-import {faHeart} from "@fortawesome/free-regular-svg-icons";
-import {faCartShopping, faMagnifyingGlass, faUser} from "@fortawesome/free-solid-svg-icons";
-import {APP_NAME} from "./../../../../lib/constants/index";
-import SignInButton from "@/components/ui/buttons/signIn button/signInButton";
+import SignInButton from "@/components/ui/header ui/user-button-client/signInButton";
 import SearchButton from "@/components/ui/buttons/search button/searchButton";
-import NavMenu from "@/components/ui/navMenu/NavMenu";
-import MobileNav from "@/components/ui/mobileNav/MobileNav";
+import NavMenu from "@/components/ui/header ui/navMenu/NavMenu";
+import MobileNav from "@/components/ui/header ui/mobileNav/MobileNav";
 
 const Header = () => {
 

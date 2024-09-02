@@ -1,17 +1,17 @@
-import ProductsList from "@/components/ui/lists/ProductList/page";
+import ProductsList from "@/components/ui/home ui/lists/ProductList/page";
 import {getAllCategories} from "../../lib/actions/category.action";
 import {getAllProducts} from "../../lib/actions/products.action";
-import InfoHeroCard from "@/components/ui/InfoHeroCard/page";
-import DiscountList from "@/components/ui/lists/discountList/DiscountList";
-import ChefList from "@/components/ui/lists/ChefList/ChefList";
-import DownLoadBox from "@/components/ui/DownLoadBox/DownLoadBox";
-import ServiceList from "@/components/ui/lists/ServiceList/ServiceList";
+import InfoHeroCard from "@/components/ui/home ui/InfoHeroCard/page";
+import DiscountList from "@/components/ui/home ui/lists/discountList/DiscountList";
+import ChefList from "@/components/ui/home ui/lists/ChefList/ChefList";
+import DownLoadBox from "@/components/ui/home ui/DownLoadBox/DownLoadBox";
+import ServiceList from "@/components/ui/home ui/lists/ServiceList/ServiceList";
 import {getAllServices} from "../../lib/actions/services.action";
 import {getAllComments} from "../../lib/actions/comments.action";
-import CommentList from "@/components/ui/lists/CommentList/CommentList";
-import BranchList from "@/components/ui/lists/BranchList/BranchList";
+import CommentList from "@/components/ui/home ui/lists/CommentList/CommentList";
+import BranchList from "@/components/ui/home ui/lists/BranchList/BranchList";
 import {getAllBranches} from "../../lib/actions/Branches.action";
-import SocialList from "@/components/ui/lists/SocialList/SocialList";
+import SocialList from "@/components/ui/home ui/lists/SocialList/SocialList";
 import {getAllSocials} from "../../lib/actions/socials.actions";
 import React, {ReactNode} from "react";
 

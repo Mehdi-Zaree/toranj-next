@@ -1,9 +1,9 @@
 import React from "react";
 import {Metadata} from "next";
 import {redirect} from "next/navigation";
-import {auth} from '../../../../auth'
-import {APP_NAME} from "../../../../lib/constants";
-import CredentialsSignInForm from "@/app/(auth)/sign-in/credentials-singin-form";
+import {auth} from '../../../auth'
+import {APP_NAME} from "../../../lib/constants";
+import CredentialsSignInForm from "@/app/sign-in/credentials-singin-form";
 import Image from "next/image";
 export const metadata : Metadata = {
     title : `sign in ${APP_NAME}`
@@ -27,7 +27,6 @@ export default async function SignIn({
                 ورود
             </h2>
             <CredentialsSignInForm/>
-
         </div>
     )
 }
