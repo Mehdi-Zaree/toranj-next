@@ -18,7 +18,7 @@ function DownLoadBox() {
                         <DownLoadCard APP={"گوگل پلی"}/>
                         <DownLoadCard APP={"لینک مستقیم"}/>
                     </div>
-                    <Image src={'https://ezteam.ir/toranj/wp-content/uploads/2024/02/Group-75.svg'} alt={'app'}
+                    <Image src={'/assets/images/toranjOnPhone.webp'} alt={'app'}
                            width={1000} height={1000} className={'w-40 lg:w-52'}/>
                 </div>
             </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import Image from "next/image";
 import ImageSkeleton from "@/components/ui/loading/image-skeleton";
 
+
 function CategoryCard({name,imageSrc,categoryIndex,cardIndex,setCategoryState}) {
     return (
         <>
