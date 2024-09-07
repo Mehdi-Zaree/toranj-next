@@ -35,7 +35,7 @@ export default function CredentialsSignInForm() {
                 <input
                     type="email"
                     className={'h-12  w-full rounded-xl px-8'}
-                    placeholder={'test@example.com'}
+                    placeholder={'try dashmosen@example.com'}
                     id={'email'}
                     name={'email'}
                     required={true}
@@ -51,6 +51,11 @@ export default function CredentialsSignInForm() {
                     id={'password'}
                     name={'password'}
                 />
+            </div>
+            <div className={'w-full  rounded-xl *:text-[#1C5B5F] bg-[#a7d397] *:text-lg  flex flex-col p-4'} dir={'ltr'}>
+                <span> dashmosen@example.com</span>
+                <span> admin@example.com</span>
+                <span>123456</span>
             </div>
             <div className={''}>
                 <SignInButton/>

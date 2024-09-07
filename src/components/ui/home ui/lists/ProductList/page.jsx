@@ -55,6 +55,7 @@ function ProductsList({categoryData,productsData}) {
                                     price={product.price}
                                     rating={product.averageRating}
                                     time={product.timeOfPreparation }
+                                    product={product}
 
                                 />
                             )

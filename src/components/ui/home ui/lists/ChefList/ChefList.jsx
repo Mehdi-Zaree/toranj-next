@@ -47,10 +47,7 @@ function ChefList({productsData}) {
                             return(
                                 <SwiperSlide key={product.productId} >
                                    <ChefCard
-                                       productName={product.productName}
-                                       productImage={product.productImage}
-                                       productDescription={product.description}
-                                       price={product.price}
+                                       product={product}
                                    />
                                 </SwiperSlide>
                             )

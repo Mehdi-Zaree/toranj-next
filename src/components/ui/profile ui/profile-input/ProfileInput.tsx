@@ -2,14 +2,14 @@ import React from 'react';
 import {auth} from "../../../../../auth";
 
 async function ProfileInput() {
-    const {user} = await auth()
+    const {user}:any = await auth()
 
 
     if (!user) {
         return null
     }
     console.log(user)
-    return (<form className={'grid grid-cols-2 gap-3'} action={'reg.php'}>
+    return (<form className={'grid lg:grid-cols-2 gap-3'} action={'reg.php'}>
         <InputsProfile
             name={"fullName"}
             label={"نام و نام خانوادگی "}
@@ -48,7 +48,7 @@ const InputsProfile = ({
                            value,
                            label,
                            readOnly
-                       }) => {
+                       }:any) => {
     return (<div className={'flex flex-col gap-3 my-8'}>
         <label
             htmlFor={'fullName'}

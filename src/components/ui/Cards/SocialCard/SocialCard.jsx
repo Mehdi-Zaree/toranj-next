@@ -10,19 +10,19 @@ import Link from "next/link";
 
 
 
-function SocialCard({socialIcon,socialName,socialLink}) {
+function SocialCard({social,socialIcons}) {
     return (
         <>
-            <Link href={socialLink} target={"_blank"}>
+            <Link href={social.socialLink} target={"_blank"}>
                 <div
                     className={'w-full lg:w-72 h-32 bg-white rounded-3xl hover:bg-[#183d3d] group cursor-pointer duration-200 flex gap-6 items-center justify-between px-5 my-3 '}>
                     <div className={'flex gap-3'}>
-                        <FontAwesomeIcon icon={socialIcon}
+                        <FontAwesomeIcon icon={socialIcons}
                                          className={'text-4xl w-12 h-12 group-hover:text-white text-[#183d3d]'}/>
                         <div className={'text-gray-400 group-hover:text-gray-300'}>
                             در
                             <span
-                                className={'text-[#183d3d] text-2xl font-semibold mx-1 group-hover:text-white'}>{socialName}</span>
+                                className={'text-[#183d3d] text-2xl font-semibold mx-1 group-hover:text-white'}>{social.socialName}</span>
                             <div>ترنج را دنبال کنید</div>
                         </div>
                     </div>

@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server';
-import {getAllServices} from "../../../../lib/actions/services.action";
+import {getAllComments} from "../../../../lib/actions/comments.action";
 
 
 export async function GET() {
-    const products = await getAllServices();
+    const products = await getAllComments();
     return NextResponse.json(products);
 }

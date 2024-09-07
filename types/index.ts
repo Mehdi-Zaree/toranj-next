@@ -1,4 +1,4 @@
-import {branches, categories, comments, services} from "../db/schema";
+import {branches, categories, comments, services, sessions} from "../db/schema";
 import {products} from "../db/schema";
 import {InferSelectModel} from 'drizzle-orm'
 
@@ -8,3 +8,4 @@ import {InferSelectModel} from 'drizzle-orm'
     export type services = InferSelectModel<typeof services>
     export type comments = InferSelectModel<typeof comments>
     export type branches = InferSelectModel<typeof branches>
+

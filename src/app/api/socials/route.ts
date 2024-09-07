@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server';
-import {getAllServices} from "../../../../lib/actions/services.action";
+import {getAllSocials} from "../../../../lib/actions/socials.actions";
 
 
 export async function GET() {
-    const products = await getAllServices();
-    return NextResponse.json(products);
+    const socials = await getAllSocials();
+    return NextResponse.json(socials);
 }

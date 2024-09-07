@@ -7,6 +7,7 @@ import CredentialsProvider from 'next-auth/providers/credentials';
 import db from './db/drizzle';
 import { users } from './db/schema';
 
+
 export const config = {
     secret: process.env.NEXTAUTH_SECRET,
     pages: {
@@ -48,7 +49,7 @@ export const config = {
         }),
     ],
     callbacks: {
-        async jwt({ token, user }) {
+        async jwt({ token, user }:any) {
             // If user is returned from authorize, include it in the token
             if (user) {
                 token.id = user.id;
@@ -58,7 +59,8 @@ export const config = {
             }
             return token;
         },
-        async session({ session, token }) {
+        async session({ session, token }:any) {
+
             // اینجا باید اطلاعات رو بدیم به سشن
             if (token) {
                 session.user.id = token.id;

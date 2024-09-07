@@ -39,8 +39,7 @@ function CommentList({commentsData}) {
                         delay: 2500,
                         disableOnInteraction: false,
                     }}
-                    onSwiper={(swiper) => console.log(swiper)}
-                    onSlideChange={() => console.log('slide change')}
+
                     className={'w-full flex justify-center'}
                 >
                     {commentsData.map((comment, index) => {

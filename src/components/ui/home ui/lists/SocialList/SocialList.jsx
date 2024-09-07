@@ -1,13 +1,15 @@
 import React from 'react';
 import SocialCard from "@/components/ui/Cards/SocialCard/SocialCard";
 import {faInstagram, faTelegram, faWhatsapp, faXTwitter} from "@fortawesome/free-brands-svg-icons";
+import {getAllSocials} from "../../../../../../lib/actions/socials.actions";
 
-function SocialList({socialsData}) {
+async function SocialList({socialsData}) {
+   const socials = await getAllSocials()
     const socialIcons = [
         faInstagram,
-        faWhatsapp,
-        faXTwitter,
         faTelegram,
+        faWhatsapp ,
+        faXTwitter,
     ]
     return (
         <>
@@ -16,14 +18,13 @@ function SocialList({socialsData}) {
                     <h2 className={'text-4xl font-bold text-gray-600 '}>راه های ارتباطی با ترنج</h2>
                 </div>
                 <div className={' lg:flex items-center justify-evenly gap-5'}>
-                    {socialsData.map((social,index)=>{
+                    {socials.map((social,index)=>{
                         return(
-                            <SocialCard
-                                key={index}
-                                socialIcon={socialIcons[index]}
-                                socialName={social.socialName}
-                                socialLink={social.socialLink}
-                            />
+                          <SocialCard
+                              key={index}
+                              social={social}
+                              socialIcons={socialIcons[index]}
+                          />
                         )
                     })}
                 </div>

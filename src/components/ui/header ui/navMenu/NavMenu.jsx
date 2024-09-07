@@ -9,13 +9,19 @@ import {faBagShopping} from "@fortawesome/free-solid-svg-icons/faBagShopping";
 import {faHeart} from "@fortawesome/free-regular-svg-icons";
 import {faCartShopping} from "@fortawesome/free-solid-svg-icons";
 import {usePathname} from "next/navigation";
+import {useCartStore, useIsHydrated} from "@/app/(cart)/cartStore";
+import logo from '@/app/logo.svg'
 
-function NavMenu(props) {
+function NavMenu() {
+
+    const totalItem = useCartStore((state)=>state.totalItem)
     const segment = usePathname()
+    const hydrate = useIsHydrated()
+
     return (
         <>
             <div className={'flex items-center gap-7 px-3 lg:pr-10'}>
-                <Image src={'https://ezteam.ir/toranj/wp-content/uploads/2023/12/Frame-229.svg'} width={10000}
+                <Image src={logo} width={10000}
                        height={10000} alt={`${APP_NAME} logo`} className={'w-20 lg:w-32 '}/>
                 <ul className={'  gap-5 hidden md:flex translate-y-1 '}>
                     <Link href={'/'}
@@ -52,7 +58,7 @@ function NavMenu(props) {
                                 <FontAwesomeIcon icon={faCartShopping} className={'w-5 h-5 flex '}/>
                                 <div
                                     className={'w-4 h-4 rounded-full flex items-center justify-center bg-[#faa631] text-white absolute -top-2 -right-2'}>
-                                    {0}
+                                    {hydrate?totalItem:0}
                                 </div>
                             </div>
 

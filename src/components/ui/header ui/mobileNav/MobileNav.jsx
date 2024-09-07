@@ -7,9 +7,12 @@ import {faBagShopping} from "@fortawesome/free-solid-svg-icons/faBagShopping";
 import {faCartShopping, faUser} from "@fortawesome/free-solid-svg-icons";
 import {faHeart} from "@fortawesome/free-regular-svg-icons";
 import {usePathname} from "next/navigation";
+import {useCartStore, useIsHydrated} from "@/app/(cart)/cartStore";
 
 function MobileNav(props) {
     const segment = usePathname()
+    const hydrate = useIsHydrated()
+    const totalItem = useCartStore((state)=>state.totalItem)
     return (
         <>
             <nav className={'w-full  flex md:hidden fixed bottom-0 left-0 z-50'}>
@@ -53,7 +56,7 @@ function MobileNav(props) {
                                         <FontAwesomeIcon icon={faCartShopping} className={'text-2xl flex text-white '}/>
                                         <div
                                             className={'w-4 h-4 rounded-full flex items-center justify-center bg-[#faa631] text-white absolute -top-2 -right-2'}>
-                                            {0}
+                                            {hydrate?totalItem:0}
                                         </div>
                                     </div>
                                 </li>
@@ -71,7 +74,7 @@ function MobileNav(props) {
                                         className={`w-1 h-1 rounded-full bg-[#faa631] ${segment === '/favorites' ? 'flex' : 'hidden'}`}></span>
                                 </li>
                             </Link>
-                            <Link href={'/Profile'}
+                            <Link href={'/profile'}
                                   className={` ${segment === '/Profile' ? 'text-[#183D3D]' : 'text-[#909090]'} duration-200 flex w-full   `}>
                                 <li className={'flex flex-col items-center gap-1 text-sm '}>
                                     <FontAwesomeIcon icon={faUser} className={'w-5 h-5'}/>

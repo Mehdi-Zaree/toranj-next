@@ -6,7 +6,7 @@ function Page() {
     return (
         <>
             <h1 className={'text-center my-10 text-4xl text-gray-700'}>پروفایل شما</h1>
-            <div className={'w-3/4 bg-white flex flex-col  mx-auto my-10 rounded-2xl p-8 '}>
+            <div className={'w-full lg:w-3/4 bg-white flex flex-col  mx-auto my-10 rounded-2xl p-4 lg:p-8 '}>
                 <div className={'h-12 flex justify-end'}>
                  <ButtonSignOut/>
                 </div>

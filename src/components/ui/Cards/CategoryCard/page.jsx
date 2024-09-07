@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from "next/image";
+import ImageSkeleton from "@/components/ui/loading/image-skeleton";
 
 function CategoryCard({name,imageSrc,categoryIndex,cardIndex,setCategoryState}) {
     return (
@@ -9,7 +10,14 @@ function CategoryCard({name,imageSrc,categoryIndex,cardIndex,setCategoryState}) 
                         onClick={()=>setCategoryState(cardIndex,name)}
                     >
                         <div className={`w-full h-full ${categoryIndex.id === cardIndex?'border-2':''} border-dashed border-black rounded-xl flex flex-col items-center justify-center gap-2`}>
-                            <Image src={imageSrc} alt={''} width={50} height={50} className={'w-14 h-14'}/>
+                            {
+                                imageSrc ? (
+                                    <Image src={imageSrc} alt={''} width={50} height={50} className={'w-14 h-14'}/>
+                                ) : (
+                                    <ImageSkeleton/>
+                                )
+                            }
+
                             <h4 className={'font-bold text-xl'}>{name}</h4>
                         </div>
                     </div>

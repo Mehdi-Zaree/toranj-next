@@ -1,5 +1,7 @@
 import React from 'react';
 import Image from "next/image";
+import leaf from './../../../../../public/assets/images/leaf.svg'
+import bigPizza from '../../../../../public/assets/images/pizza.webp'
 
 function InfoHeroCard(props) {
     return (
@@ -14,17 +16,17 @@ function InfoHeroCard(props) {
                         اطلاعات رستوران
                     </button>
                 </div>
-                <Image src={'https://ezteam.ir/toranj/wp-content/plugins/toranj/assets/images/leaf.svg'} width={1000}
+                <Image src={leaf} width={1000}
                        height={0} alt={'sadf'}
                        className={'w-20 absolute right-4 bottom-5 rotate-[200deg]'}
                 />
 
             </div>
             <div className={'w-full lg:w-1/2 h-full  flex justify-center items-center relative  overflow-hidden'}>
-                <Image src={'https://ezteam.ir/toranj/wp-content/plugins/toranj/assets/images/pizza.686b50b7.webp'} width={1000} height={0} alt={'sadf'}
+                <Image src={bigPizza} width={1000} height={0} alt={'sadf'}
                        className={' w-3/4'}
                 />
-                <Image src={'https://ezteam.ir/toranj/wp-content/plugins/toranj/assets/images/leaf.svg'} width={1000} height={0} alt={'sadf'}
+                <Image src={leaf} width={1000} height={0} alt={'sadf'}
                        className={'w-20 absolute left-0 top-5 rotate-12'}
                 />
 
