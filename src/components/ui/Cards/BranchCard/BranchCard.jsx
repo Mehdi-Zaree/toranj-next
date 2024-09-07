@@ -7,7 +7,7 @@ function BranchCard({branchImage,branchName,BranchNumber,branchAddress}) {
         <>
             <div className={'w-full bg-white  flex flex-col items-center gap-5 rounded-2xl shadow group hover:shadow-xl duration-200 overflow-hidden '}>
                 <Image src={branchImage} alt={'isfahan'} width={10000} height={10000} className={' w-full h-52'}/>
-                <h4 className={'text-center text-2xl '}> نمایندگی{branchName}</h4>
+                <h4 className={'text-center text-2xl '}>نمایندگی { branchName}</h4>
                 <div className={'flex gap-3 text-xl text-gray-700 font-semibold'}>
                     <span>{BranchNumber}</span>
                     <div className={'w-1 h-5 rounded bg-yellow-500'}></div>

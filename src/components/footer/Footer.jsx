@@ -35,11 +35,11 @@ function  Footer() {
                                 مناسبترین انتخاب برای تمام لحظات شاد و لذت بخش شماست.</p>
                             <div className={'flex justify-between md:justify-center'}>
                                 <Image
-                                    src={'https://ezteam.ir/toranj/wp-content/uploads/2024/01/image_2024-05-08_141417850.png'}
-                                    width={150} height={150} alt={'namad'}/>
+                                    src={'/namad1.webp'}
+                                    width={150} height={150} alt={'namad1'}/>
                                 <Image
-                                    src={'https://ezteam.ir/toranj/wp-content/uploads/2024/01/image_2024-05-09_124035747.png'}
-                                    width={150} height={150} alt={'namads'}/>
+                                    src={'/namad2.webp'}
+                                    width={150} height={150} alt={'namad2'}/>
                             </div>
                         </div>
                         <div className={'w-full flex justify-center gap-10  '}>
