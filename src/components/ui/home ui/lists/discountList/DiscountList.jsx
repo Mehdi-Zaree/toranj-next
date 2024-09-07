@@ -48,11 +48,7 @@ function DiscountList({productsData}) {
                                             return(
                                                 <SwiperSlide key={product.productId} >
                                                     <DiscountProductCard
-                                                        discountAmount={product.discountAmount}
-                                                        productImage={product.productImage}
-                                                        productName={product.productName}
-                                                        productPrice={product.price}
-                                                        productId={product.productId}
+                                                        product={product}
                                                     />
                                                 </SwiperSlide>
                                             )
