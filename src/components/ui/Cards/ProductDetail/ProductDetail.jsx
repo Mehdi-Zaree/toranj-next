@@ -14,16 +14,9 @@ function ProductDetail({setIsModalOpen, productImage, productName, productPrice,
     return (
         <div className={'lg:w-1/2 md:h-auto  w-full h-screen lg:flex  rounded-xl bg-white shadow-md relative gap-10 px-2 py-4 lg:py-10 transition-transform duration-300 transform-gpu'}>
             <CloseModalButton setIsModalOpen={setIsModalOpen}/>
-            <div className={'flex flex-col w-full lg:w-1/3 h-1/2 lg:h-full '}>
-                <Swiper
-                    modules={[Pagination]}
-                    pagination={{clickable: true}}
-                >
-                    <SwiperSlide>
-                        <Image loading={'eager'} src={product.productImage} alt={product.productName} width={10000} height={10000}
-                               className={'lg:w-full w-3/4  mx-auto'}/>
-                    </SwiperSlide>
-                </Swiper>
+            <div className={'flex flex-col w-full lg:w-1/3  '}>
+                        <Image loading={'eager'} src={product.productImage} alt={product.productName} width={1000} height={10000}
+                               className={' w-full mx-auto'}/>
             </div>
             <div className={'w-full lg:w-3/4 h-1/2 lg:h-full px-4 flex flex-col gap-3 '}>
                 <div className={'w-full flex justify-between my-3'}>
