@@ -8,11 +8,13 @@ import ProductDetail from "@/components/ui/Cards/ProductDetail/ProductDetail";
 import ImageSkeleton from "@/components/ui/loading/image-skeleton";
 import {useCartStore} from "@/app/(cart)/cartStore";
 import AddToFavorite from "@/components/ui/buttons/addToFavorite/AddToFavorite";
+import staticTextEnums from '@/app/enums/static-text-enums'
 
 function ProductCard({product}) {
     const cart = useCartStore((state)=>state.cart)
     const addToCart = useCartStore((state)=>state.addToCart)
     const quantityPlus = useCartStore((state)=>state.quantityPlus)
+    const dicountedPrice = product.price-(product.price*product.discountAmount/100)
     const [isModalOpen, setIsModalOpen] =useState(false);
     return (
         <>
@@ -69,8 +71,8 @@ function ProductCard({product}) {
                                         {`${product.discountAmount}%`}
                                     </span>
                                 </div>
-                                <div className={'font-bold text-xl '}>
-                                     {product.discount?Number(product.price-(product.price*product.discountAmount/100)).toLocaleString('fa'):Number(product.price).toLocaleString('fa')}تومان
+                                <div className={'font-bold text-xl  w-40 flex justify-end'}>
+                                    {staticTextEnums.currency} {product.discount?Number(dicountedPrice).toLocaleString('fa'):Number(product.price).toLocaleString('fa')}
                                 </div>
                             </div>
                         </div>

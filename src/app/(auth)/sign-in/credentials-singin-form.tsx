@@ -8,6 +8,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelope} from "@fortawesome/free-regular-svg-icons";
 import {faLock} from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+import staticFormTexts from "@/app/enums/static-form-texts";
 
 export default function CredentialsSignInForm() {
     const [data, action] = useFormState(signInWithCredentials, {
@@ -22,7 +23,7 @@ export default function CredentialsSignInForm() {
         const {pending} = useFormStatus()
         return (
             <button disabled={pending} className={'w-40 h-12 bg-[#1C5B5F] rounded-xl text-gray-200 '}>
-                {pending ? 'در حال ورود' : 'ورود به حساب کاربری'}
+                {pending ? staticFormTexts.pending : staticFormTexts.signInToAccount}
             </button>
         )
     }
@@ -65,14 +66,14 @@ export default function CredentialsSignInForm() {
             )}
             {!data && (
                 <div>
-                    ارور ناشناخته رخ داده است.{""}
+                    {staticFormTexts.unknownError}{""}
                     <button className={'w-40 h-12 bg-[#1C5B5F] rounded-xl text-gray-200 my-3 '} onClick={() => window.location.reload()}>
-                        لطفا صفحه را بارگیری کنید
+                        {staticFormTexts.pleaseReload}
                     </button>
                 </div>
             )}
             <div className={'text-gray-200'}>
-                حساب کاربری ندارید؟
+                {staticFormTexts.dontYouHaveAnAccount}
                 <Link href={`/sign-up?callbackUrl=${encodeURIComponent(callbackUrl)}`} className={'mx-1 text-[#a7d397]'}>
                     ثبت نام
                 </Link>

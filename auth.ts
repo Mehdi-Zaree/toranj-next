@@ -50,7 +50,7 @@ export const config = {
     ],
     callbacks: {
         async jwt({ token, user }:any) {
-            // If user is returned from authorize, include it in the token
+
             if (user) {
                 token.id = user.id;
                 token.name = user.name;
@@ -61,12 +61,12 @@ export const config = {
         },
         async session({ session, token }:any) {
 
-            // اینجا باید اطلاعات رو بدیم به سشن
+
             if (token) {
                 session.user.id = token.id;
                 session.user.name = token.name;
                 session.user.email = token.email;
-                session.user.token = token.jti; // این همون توکنه
+                session.user.token = token.jti;
                 session.user.role = token.role;
                 session.user.init = token.iat;
             }

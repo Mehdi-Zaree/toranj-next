@@ -9,7 +9,7 @@ config.autoAddCss = false
 
 export const metadata = {
   title: "ترنج",
-  description: "وب اپلیکیشن رستوران ترنج غذا حاضر است.",
+  description: "وب اپلیکیشن رستوران ترنج, غذا حاضر است.",
 };
 
 export default function RootLayout({children}:any) {

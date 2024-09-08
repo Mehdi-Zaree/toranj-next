@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import {getAllBranches} from "../../../../lib/actions/Branches.action";
+import {getAllBranches} from "../../../../lib/actions/branches.action";
 
 
 export async function GET() {

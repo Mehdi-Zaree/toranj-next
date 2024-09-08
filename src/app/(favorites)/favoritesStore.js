@@ -15,14 +15,14 @@ export const useFavoritesStore = create(
             })),
         }),
         {
-            name: "favorites-storage", // نام کلید ذخیره‌سازی در localStorage
-            // از localStorage فقط در کلاینت استفاده کنید
+            name: "favorites-storage",
+
             getStorage: () => (typeof window !== "undefined" ? localStorage : null),
         }
     )
 )
 
-// اطمینان حاصل کنید که این بخش فقط در کلاینت اجرا می‌شود
+
 export function useIsHydrated() {
     const [hydrated, setHydrated] = useState(false)
 

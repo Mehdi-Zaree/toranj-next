@@ -8,13 +8,14 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import DiscountProductCard from "@/components/ui/Cards/DiscountProductCard/DiscountProductCard";
 import NavigationButton from "@/components/ui/swiper/NavigationButton/NavigationButton";
+import homeStaticTextEnums from "@/app/enums/static-text-enums";
 
 function DiscountList({productsData}) {
     return (
         <>
             <section className={' w-full my-20  border-t-4 border-dashed border-gray-300  '}>
                 <div className={'bg-[#f4f4f4] w-52 flex place-content-center h-fit mx-auto  -translate-y-6'}>
-                    <h2 className={'text-4xl font-bold text-gray-600 '}>تخفیفات ویژه</h2>
+                    <h2 className={'text-4xl font-bold text-gray-600 '}>{homeStaticTextEnums.specialDiscount}</h2>
                 </div>
                 <div className={'discount w-full h-96 mx-auto rounded-2xl bg-[#193D3D] my-14 relative '}>
                     <Swiper

@@ -1,8 +1,6 @@
 import {create} from "zustand";
-import {products} from "../../../db/schema";
 
 async function fetchData(url) {
-    // استفاده از `NEXT_PUBLIC_BASE_URL` برای تنظیم پایه URL
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || '';
     const res = await fetch(`${baseUrl}${url}`, { cache: 'force-cache'  });
     if (!res.ok) throw new Error('Failed to fetch data');

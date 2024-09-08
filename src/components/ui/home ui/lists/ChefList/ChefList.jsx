@@ -7,6 +7,7 @@ import ChefCard from "@/components/ui/Cards/ChefCard/ChefCard";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faArrowLeft} from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+import homeStaticTextEnums from "@/app/enums/static-text-enums";
 
 
 function ChefList({productsData}) {
@@ -14,7 +15,7 @@ function ChefList({productsData}) {
         <>
             <section className={' w-full my-20  border-t-4 border-dashed border-gray-300 flex flex-col justify-center '}>
                 <div className={'bg-[#f4f4f4] w-64 flex place-content-center h-fit mx-auto  -translate-y-6'}>
-                    <h2 className={'text-4xl font-bold text-gray-600 '}>پیشنهاد سرآشپز</h2>
+                    <h2 className={'text-4xl font-bold text-gray-600 '}>{homeStaticTextEnums.chefSuggestion}</h2>
                 </div>
                 <Swiper
                     modules={[Pagination,Navigation,Autoplay]}

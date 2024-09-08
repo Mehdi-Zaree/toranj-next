@@ -6,6 +6,7 @@ import {APP_NAME} from "../../../../lib/constants";
 import CredentialsSignInForm from "@/app/(auth)/sign-in/credentials-singin-form";
 import Image from "next/image";
 import logo from '@/app/logo.svg'
+import staticFormTexts from "@/app/enums/static-form-texts";
 export const metadata : Metadata = {
     title : `sign in ${APP_NAME}`
 }
@@ -31,7 +32,7 @@ export default async function SignIn({
                            width={10000} height={10000} className={'w-32'}/>
                 </div>
                 <h2 className={'text-2xl text-gray-100'}>
-                    ورود
+                    {staticFormTexts.signIn}
                 </h2>
                 <CredentialsSignInForm/>
             </div>

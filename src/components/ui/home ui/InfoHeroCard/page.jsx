@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from "next/image";
-import leaf from './../../../../../public/assets/images/leaf.svg'
-import bigPizza from '../../../../../public/assets/images/pizza.webp'
+import homeStaticTextEnums from "@/app/enums/static-text-enums";
 
 function InfoHeroCard(props) {
     return (
@@ -9,24 +8,24 @@ function InfoHeroCard(props) {
             <div className={'w-full lg:w-1/2 h-full flex items-center justify-center   '}>
                 <div className={'w-3/4   flex flex-col gap-2 '}>
                     <span className={'flex items-center gap-2 text-[#80a1a2] text-xl'}><span
-                        className={'flex w-1 h-1 rounded bg-[#ffa600]'}></span>سفارش میپذیریم </span>
-                    <h3 className={'text-white text-xl lg:text-3xl font-semibold'}>تجربه غذایی لذیذ و به یادماندنی</h3>
-                    <p className={'text-[#80a1a2] hidden lg:flex leading-7 px-2 border-[#0f4e50] border-r-2 text-md '}>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی</p>
+                        className={'flex w-1 h-1 rounded bg-[#ffa600]'}></span>{homeStaticTextEnums.weAcceptOrders} </span>
+                    <h3 className={'text-white text-xl lg:text-3xl font-semibold'}>{homeStaticTextEnums.heroHeader}</h3>
+                    <p className={'text-[#80a1a2] hidden lg:flex leading-7 px-2 border-[#0f4e50] border-r-2 text-md '}>{homeStaticTextEnums.heroText}</p>
                     <button className={'w-32 h-12 my-5 font-bold rounded-xl bg-[#a7d397] text-[#183d3d]'}>
-                        اطلاعات رستوران
+                        {homeStaticTextEnums.restaurantInfo}
                     </button>
                 </div>
-                <Image src={leaf} width={1000}
-                       height={0} alt={'sadf'}
+                <Image src='/assets/images/leaf.svg' width={1000}
+                       height={0} alt={'leaf'}
                        className={'w-20 absolute right-4 bottom-5 rotate-[200deg]'}
                 />
 
             </div>
             <div className={'w-full lg:w-1/2 h-full  flex justify-center items-center relative  overflow-hidden'}>
-                <Image src={bigPizza} width={1000} height={0} alt={'sadf'}
+                <Image src='/assets/images/pizza.webp' width={1000} height={0} alt={'heroPizza'}
                        className={' w-3/4'}
                 />
-                <Image src={leaf} width={1000} height={0} alt={'sadf'}
+                <Image src='/assets/images/leaf.svg' width={1000} height={0} alt={'sadf'}
                        className={'w-20 absolute left-0 top-5 rotate-12'}
                 />
 

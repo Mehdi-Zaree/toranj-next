@@ -4,6 +4,7 @@ import PaymentBox from "@/components/ui/cart ui/payment-box/index";
 import CartList from "@/components/ui/cart ui/cart list";
 import {useCartStore, useIsHydrated} from "@/app/(cart)/cartStore";
 import NothingAdded from "@/components/NothingAdded/NothingAdded";
+import staticCartTexts from "@/app/enums/static-cart-texts";
 
 
 function Page() {
@@ -13,13 +14,13 @@ function Page() {
         return null
     }
     if(cart.length === 0)
-       return <NothingAdded text={'هنوز محصولی اضافه نکردی !'}/>
+       return <NothingAdded text={staticCartTexts.nothingAddedText}/>
 
     return (
         <>
             <section className={'w-full  flex flex-col lg:px-20 items-center px-5 gap-5'}>
                 <h1 className={'text-3xl text-gray-700 font-semibold my-5'}>
-                    سبد خرید شما
+                    {staticCartTexts.pageHeader}
                 </h1>
 
                 <div className={'w-full h-12  before:content-[""] before:flex before:w-3/4 md:before:w-[95%] before:mx-auto before:h-full before:border-b-2 before:border-dashed before:border-gray-400 before:-translate-y-1/2 relative  '}>
@@ -41,7 +42,7 @@ function Page() {
               </svg>
                             </span>
                             <span className={'flex text-gray-500 font-semibold'}>
-                                سبد خرید
+                                {staticCartTexts.cart}
                             </span>
                         </div>
                         <div className={' flex flex-col items-center gap-1'}>
@@ -57,7 +58,7 @@ function Page() {
               </svg>
                             </span>
                             <span className={'flex text-gray-500 font-semibold'}>
-                                آدرس و نحوه ارسال
+                                {staticCartTexts.addressAndDelivery}
                             </span>
                         </div>
                         <div className={' flex flex-col items-center gap-1'}>
@@ -78,7 +79,7 @@ function Page() {
               </svg>
                             </span>
                             <span className={'flex text-gray-500 font-semibold'}>
-                                پرداخت
+                                {staticCartTexts.payment}
                             </span>
                         </div>
                     </div>

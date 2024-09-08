@@ -1,5 +1,6 @@
 import React from 'react';
 import {auth} from "../../../../../auth";
+import staticFormTexts from "@/app/enums/static-form-texts";
 
 async function ProfileInput() {
     const {user}:any = await auth()
@@ -12,25 +13,25 @@ async function ProfileInput() {
     return (<form className={'grid lg:grid-cols-2 gap-3'} action={'reg.php'}>
         <InputsProfile
             name={"fullName"}
-            label={"نام و نام خانوادگی "}
+            label={staticFormTexts.fullName}
             type={'text'}
             value={user?.name}
         />
         <InputsProfile
             name={"email"}
-            label={"ایمیل"}
+            label={staticFormTexts.email}
             type={'email'}
             value={user?.email}
         />
         <InputsProfile
             name={"role"}
-            label={"مقام"}
+            label={staticFormTexts.role}
             type={'text'}
             value={user?.role}
         />
         <InputsProfile
             name={"time"}
-            label={"زمان ورود"}
+            label={staticFormTexts.timeOfEntrance}
             type={'text'}
             readOnly={true}
             value={new Date(user?.init).toLocaleDateString("fa")}

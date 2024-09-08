@@ -5,13 +5,14 @@ import {Autoplay, Navigation, Pagination} from "swiper/modules";
 import 'swiper/css/pagination';
 import 'swiper/css';
 import BranchCard from "@/components/ui/Cards/BranchCard/BranchCard";
+import homeStaticTextEnums from "@/app/enums/static-text-enums";
 
 function BranchList({branchesData}) {
     return (
         <>
             <section className={' w-full my-20  border-t-4 border-dashed border-gray-300'}>
                 <div className={'bg-[#f4f4f4] w-64 flex place-content-center h-fit mx-auto  -translate-y-6'}>
-                    <h2 className={'text-4xl font-bold text-gray-600 '}>نمایندگی های ترنج</h2>
+                    <h2 className={'text-4xl font-bold text-gray-600 '}>{homeStaticTextEnums.toranjBranches}</h2>
                 </div>
                 <Swiper
                     modules={[Pagination, Navigation, Autoplay]}
