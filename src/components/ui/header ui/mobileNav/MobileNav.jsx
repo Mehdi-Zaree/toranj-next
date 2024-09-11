@@ -74,7 +74,7 @@ function MobileNav(props) {
                                         className={`w-1 h-1 rounded-full bg-[#faa631] ${segment === '/favorites' ? 'flex' : 'hidden'}`}></span>
                                 </li>
                             </Link>
-                            <Link href={'/profile'}
+                            <Link href={!session ? 'api/auth/signin' : '/profile'}
                                   className={` ${segment === '/Profile' ? 'text-[#183D3D]' : 'text-[#909090]'} duration-200 flex w-full   `}>
                                 <li className={'flex flex-col items-center gap-1 text-sm '}>
                                     <FontAwesomeIcon icon={faUser} className={'w-5 h-5'}/>
