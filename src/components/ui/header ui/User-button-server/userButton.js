@@ -8,7 +8,7 @@ async function UserButton(props) {
         <>
             <Link href={!session ? 'api/auth/signin' : '/profile'}>
                 <button
-                    className={'w-44 h-12 bg-[#a7d397] rounded-lg text-lg text-[#183d3d] hidden lg:block'}>
+                    className={'w-44 h-12 bg-[#a7d397] rounded-lg text-lg text-[#183d3d] hidden md:block'}>
                     {!session?'ورود | ثبت نام':session?.user?.name}
                 </button>
             </Link>
