@@ -57,7 +57,7 @@ const InputsProfile = ({
         >
             {
                 label
-            } :
+            }
         </label>
         <input
             readOnly={readOnly}
