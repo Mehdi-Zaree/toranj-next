@@ -65,7 +65,6 @@ function NavMenu() {
                             <span className={'font-bold'}>سبد خرید </span>
                             <span
                                 className={`w-1 h-1 rounded-full bg-white ${segment === '/cart' ? 'flex' : 'hidden'}`}></span>
-
                         </li>
                     </Link>
                 </ul>
