@@ -1,14 +1,14 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).</br>
 
+</br>
 
-<div>
+<div align="center">
   <a href="https://toranj-next.vercel.app/" text-align='center'>Live Preview</a> . 
-<a href="https://github.com/mehdi-zaree/toranj-next/issues" text-align='center'>Report Issues</a> . 
-<a href="https://github.com/mehdi-zaree/toranj-next/issues" text-align='center'>Request features</a> 
+  <a href="https://github.com/mehdi-zaree/toranj-next/issues" text-align='center'>Report Issues</a> . 
+  <a href="https://github.com/mehdi-zaree/toranj-next/issues" text-align='center'>Request features</a> 
 </div>
 </br>
-</br>
-</br>
+
 
 ![Screenshot from 2024-09-30 12-53-19](https://github.com/user-attachments/assets/c34cf42c-732b-4b00-bc70-eff04944e9e2)
 
