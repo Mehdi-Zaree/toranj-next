@@ -56,5 +56,5 @@ Project Link: (https://github.com/Mehdi-Zaree/Financial-solutions-react/)
 
 Here are some references to tools that helped me out.
 * [Font Awesome](https://fontawesome.com)
-* [youtubeVideo]([https://www.youtube.com/watch?v=4Gt_YyGf6B0&t=2828s](https://youtu.be/vLze97zZKsU?si=kCRVZX5uMFFg9zc2))
+* [youtubeVideo](https://www.youtube.com/watch?v=vLze97zZKsU&list=WL&index=6&t=1165s)
 
