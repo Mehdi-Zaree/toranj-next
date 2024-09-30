@@ -17,24 +17,26 @@
 
 This section should list any major frameworks/libraries that bootstrap your project. Leave any add-ons/plugins for the acknowledgments section. Here are a few examples.
 
-* [![React][React.js]][React-url]
-* 	![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 * 	![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 * 	![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 * 	![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+* 	![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+* 	![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+* 	![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+* 	![Zod](https://img.shields.io/badge/zod-%233068b7.svg?style=for-the-badge&logo=zod&logoColor=white)
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
-1. First install yarn
+1. First
  ```sh
-   npm install yarn
+   pnpm i
    ```
 2. then write 
  ```sh
-   yarn dev
+   pnpm dev
     #or
-   yarn run dev
+   pnpm run dev
    ```
 
 
@@ -53,7 +55,6 @@ Project Link: (https://github.com/Mehdi-Zaree/Financial-solutions-react/)
 ## Acknowledgments
 
 Here are some references to tools that helped me out.
-* [Figma file](https://www.figma.com/design/AOGZonbaTrwpPwPDTOhMXQ/Tic-Tac-Toe-(Community)?node-id=52-9&t=7ghLd3mXwgnGsH7y-0)
 * [Font Awesome](https://fontawesome.com)
-* [youtubeVideo](https://www.youtube.com/watch?v=4Gt_YyGf6B0&t=2828s)
+* [youtubeVideo]([https://www.youtube.com/watch?v=4Gt_YyGf6B0&t=2828s](https://youtu.be/vLze97zZKsU?si=kCRVZX5uMFFg9zc2))
 
