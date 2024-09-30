@@ -1,9 +1,11 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).</br>
 
 
-<a href="https://toranj-next.vercel.app/" text-align='center'>demo link</a>
-<a href="https://toranj-next.vercel.app/" text-align='center'>Report Issues</a> 
-<a href="https://toranj-next.vercel.app/" text-align='center'>Request features</a> 
+<div>
+  <a href="https://toranj-next.vercel.app/" text-align='center'>Live Preview</a> . 
+<a href="https://github.com/mehdi-zaree/toranj-next/issues" text-align='center'>Report Issues</a> . 
+<a href="https://github.com/mehdi-zaree/toranj-next/issues" text-align='center'>Request features</a> 
+</div>
 </br>
 </br>
 </br>
