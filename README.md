@@ -1,5 +1,15 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).</br>
-<a href="https://toranj-next.vercel.app/">demo link</a>
+
+
+<a href="https://toranj-next.vercel.app/" text-align='center'>demo link</a>
+<a href="https://toranj-next.vercel.app/" text-align='center'>Report Issues</a> 
+<a href="https://toranj-next.vercel.app/" text-align='center'>Request features</a> 
+</br>
+</br>
+</br>
+
+![Screenshot from 2024-09-30 12-53-19](https://github.com/user-attachments/assets/c34cf42c-732b-4b00-bc70-eff04944e9e2)
+
 ## Getting Started
 
 First, run the development server:
