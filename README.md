@@ -13,37 +13,47 @@
 
 ![Screenshot from 2024-09-30 12-53-19](https://github.com/user-attachments/assets/c34cf42c-732b-4b00-bc70-eff04944e9e2)
 
+### Built With
+
+This section should list any major frameworks/libraries that bootstrap your project. Leave any add-ons/plugins for the acknowledgments section. Here are a few examples.
+
+* [![React][React.js]][React-url]
+* 	![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+* 	![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
+* 	![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+* 	![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
+
+<!-- GETTING STARTED -->
 ## Getting Started
+1. First install yarn
+ ```sh
+   npm install yarn
+   ```
+2. then write 
+ ```sh
+   yarn dev
+    #or
+   yarn run dev
+   ```
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+open project on port: http://localhost:5173/
+<!-- CONTACT -->
+## Contact
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Mehdi Zarei - [linkedIn](https://linkedin.com/in/mehdi-zri) - mahdizarei22019@gmail.com
 
-You can start editing the page by modifying `app/page.ts`. The page auto-updates as you edit the file.
+Project Link: (https://github.com/Mehdi-Zaree/Financial-solutions-react/)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Here are some references to tools that helped me out.
+* [Figma file](https://www.figma.com/design/AOGZonbaTrwpPwPDTOhMXQ/Tic-Tac-Toe-(Community)?node-id=52-9&t=7ghLd3mXwgnGsH7y-0)
+* [Font Awesome](https://fontawesome.com)
+* [youtubeVideo](https://www.youtube.com/watch?v=4Gt_YyGf6B0&t=2828s)
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
